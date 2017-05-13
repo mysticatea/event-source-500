@@ -19,3 +19,6 @@ $ npm install --production
 # It starts a web server at localhost:3000 and opens Chrome.
 $ npm start
 ```
+
+[Node.js]: https://nodejs.org/
+[Google Chrome]: https://www.google.com/chrome
