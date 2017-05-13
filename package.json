@@ -1,0 +1,35 @@
+{
+  "private": true,
+  "name": "event-source-500",
+  "version": "1.0.0",
+  "description": "Repro code that EventSource does not reconnect after a 500 error.",
+  "engines": {
+    "node": ">=4"
+  },
+  "dependencies": {
+    "express": "^4.15.2",
+    "npm-run-all": "^4.0.2",
+    "opener": "^1.4.3",
+    "wait-on": "^2.0.2"
+  },
+  "devDependencies": {
+    "eslint": "^3.19.0",
+    "eslint-config-mysticatea": "^10.0.0"
+  },
+  "scripts": {
+    "start": "run-p start:*",
+    "start:server": "node server.js",
+    "start:client": "wait-on http://localhost:3000/ && opener chrome http://localhost:3000/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mysticatea/event-source-500.git"
+  },
+  "keywords": [],
+  "author": "Toru Nagashima (https://github.com/mysticatea)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mysticatea/event-source-500/issues"
+  },
+  "homepage": "https://github.com/mysticatea/event-source-500#readme"
+}
