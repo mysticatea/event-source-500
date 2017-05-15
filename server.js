@@ -18,7 +18,9 @@ const express = require("express")
 
 const app = express()
 
-app.get("/events", (_req, res) => res.sendStatus(500))
+app.get("/events", (_req, res) => {
+    res.type("text/event-stream").status(500).send("")
+})
 app.use(express.static(path.join(__dirname, "static-files")))
 
 app.listen(3000)
